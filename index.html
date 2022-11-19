@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/9a417ab140.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Musica</title>
+    <link rel="stylesheet" href="input.css" />
+  </head>
+  <body>
+    <!-- Mobile side nav -->
+    <div
+      id="transMenu"
+      class="fixed top-[0] bottom-0 h-screen bg-[#1e1e1e] px-5 py-14 w-[80vw] z-50 lg:hidden flex flex-col space-y-16 items-start mobilemenu"
+    >
+      <div
+        id="closbtn"
+        class="absolute mt-5 font-bold text-white text-2xl closeMenu"
+        onclick="closeMenu();"
+      >
+        X
+      </div>
+      <!-- Item 1 -->
+      <div class="flex space-x-5 items-center mb-10" onclick="menuChange2();">
+        <a href="#">
+          <img
+            src="images/Home.png"
+            class="w-[20px] h-[14px] flex-shrink-0 flex-grow-0"
+            alt=""
+          />
+        </a>
+
+        <a
+          href="#"
+          class="text-gray-400 hover:text-white font-semibold hover:font-bold duration-500"
+        >
+          Home
+        </a>
+      </div>
+      <!-- Item 2 -->
+      <div class="flex space-x-5 items-center mb-10" onclick="menuChange2(); ">
+        <div class="h-[40] w-[42]">
+          <img
+            src="images/radiiio.png"
+            id="radio2"
+            class="cursor-pointer"
+            onclick="menuChange2();"
+            alt=""
+          />
+        </div>
+
+        <p
+          class="text-gray-400 hover:text-white font-semibold hover:font-bold duration-500"
+        >
+          My collections
+        </p>
+      </div>
+      <!-- Item 3 -->
+      <div class="flex space-x-5 items-center mb-10">
+        <img src="images/Vector.svg" alt="" />
+        <p
+          class="text-gray-400 hover:text-white font-semibold hover:font-bold duration-500"
+        >
+          Radio
+        </p>
+      </div>
+      <!-- Item 4 -->
+      <div class="flex space-x-5 items-center mb-10">
+        <img src="images/videos.svg" alt="" />
+        <p
+          class="text-gray-400 hover:text-white font-semibold hover:font-bold duration-500"
+        >
+          Music videos
+        </p>
+      </div>
+      <!-- Item 5 -->
+      <div class="flex space-x-5 items-center mb-10">
+        <img src="images/profile.png" alt="" />
+        <p
+          class="text-gray-400 hover:text-white font-semibold hover:font-bold duration-500"
+        >
+          Profile
+        </p>
+      </div>
+      <!-- Item 6 -->
+      <div class="flex space-x-5 items-center mb-10">
+        <img src="images/Logout.png" alt="" />
+        <p
+          class="text-gray-400 hover:text-white font-semibold hover:font-bold duration-500"
+        >
+          Log out
+        </p>
+      </div>
+    </div>
+    <section
+      id="general-styling"
+      class="lg:px-[7rem] lg:py-[1rem] lg:pt-[20px] px-4 py-[3rem] lg:h-[400vh] h-[230vh] relative"
+    >
+      <!-- Nav  bar for desktop -->
+      <nav
+        class="w-full fixed top-0 h-[10vh] bg-[#1e1e1e] z-20 justify-between flex items-center"
+      >
+        <div class="flex justify-between space-x-5 lg:hidden">
+          <img
+            src="images/menu 1.png"
+            id="menubtn1"
+            onclick="openMenu();"
+            class=""
+            alt=""
+          />
+          <img src="images/logo.svg" class="" alt="" />
+        </div>
+        <div
+          class="w-[50%] flex flex-start ml-72 lg:ml-16 space-x-5 items-center mt-3"
+        >
+          <img
+            src="images/search.png"
+            alt=""
+            class="cursor-pointer h-8 w-8 lg:w-auto lg:h-auto"
+          />
+          <div class="absolute lg:block right-[100%] lg:right-auto">
+            <input
+              type="search "
+              class="text-gray-400 bg-[#1e1e1e] outline-none p-2 placeholder-text-sm"
+              placeholder="Search artists"
+            />
+          </div>
+        </div>
+      </nav>
+      <!-- Side nav -->
+
+      <div
+        class="p-4 pt[4rem] fixed left-2 top-0 bottom-0 lg:flex flex-col w-[5%] flex-shrink-0 hidden"
+      >
+        <!-- Desktop side nav -->
+        <div class="pl-5 hidden lg:block">
+          <div class="w-[30px] h-[30px] mb-5">
+            <img src="images/logo.svg" alt="" class="flex-shrink-0" />
+          </div>
+
+          <div
+            class="flex flex-col rounded-full items-center w-[40px] justify-center space-y-6 bg-[#111414] h-[28vh]"
+          >
+            <a href="">
+              <img
+                src="images/Iconly/Bulk/Vector.png"
+                class="cursor-pointer"
+                alt=""
+              />
+            </a>
+
+            <img
+              src="images/radiiio.png"
+              alt=""
+              id="radio"
+              class="cursor-pointer"
+              onclick="menuChange()"
+              ;
+            />
+
+            <a href="">
+              <img src="images/Vector.svg" alt="" class="cursor-pointer" />
+            </a>
+            <a href="">
+              <img src="images/videos.svg" alt="" class="cursor-pointer" />
+            </a>
+          </div>
+          <!-- Second set of menu items -->
+          <div
+            class="flex flex-col rounded-full items-center justify-center space-y-6 bg-[#111414] w-[40px] h-[14vh] mt-[20px]"
+          >
+            <a href="">
+              <img src="images/profile.png" alt="" class="cursor-pointer" />
+            </a>
+            <a href="">
+              <img src="images/Logout.png" alt="" class="cursor-pointer" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom music slider and nav -->
+      <div
+        class="bg-[black] fixed bottom-0 left-0 right-0 h-[15vh] bg-opacity-10 backdrop-blur-md lg:backdrop-blur-sm z-40 flex py-3 pt-5 px-5 lg:px-20 w-full"
+      >
+        <div
+          class="desktop-controls lg:flex lg:justify-between lg:min-w-full hidden space-x-5"
+        >
+          <div class="flex items-center w-[30%] space-x-5">
+            <div class="">
+              <img
+                src="images/Rectangle 15.png"
+                alt=""
+                id="track_img2"
+                class="h-[60px] rounded-xl w-[60px]"
+              />
+            </div>
+
+            <div class="flex flex-col">
+              <h1 class="text-white text-md font-semibold" id="title3">
+                Seasons In
+              </h1>
+              <p class="text-gray-400 text-xs" id="artist2">James</p>
+            </div>
+          </div>
+          <!-- Music controls -->
+          <div class="flex flex-col space-y-4 min-w-[60%] items-center ml-0">
+            <!-- Skip next and co -->
+            <div class="flex items-center justify-between w-[40vh]">
+              <img src="images/shuffle.png" alt="" />
+              <img
+                src="images/previous.png"
+                alt=""
+                onclick="previous_song();"
+              />
+              <div
+                onclick="justplay();"
+                class="flex bg-[#FACD66] border border-gray-600 rounded-full h-8 w-8 items-center justify-center"
+              >
+                <img src="images/Vector (8).png" id="play2" alt="" />
+              </div>
+              <img src="images/next.png" alt="" onclick="next_song();" />
+              <img src="images/repeate-one.png" alt="" />
+            </div>
+            <!-- Slider for song -->
+            <div class="slider-cont bg-inherit w-[30vw] p-0 mt-4">
+              <input
+                class="popup_duration"
+                type="range"
+                name=""
+                min="0"
+                max="100"
+                value="0"
+                id="bottom_sln"
+                onchange="change_duration();"
+              />
+            </div>
+          </div>
+          <!-- Volume increase -->
+          <div class="flex justify-between items-center w-[10%]">
+            <img src="images/volume-high.png" class="lg:hidden" alt="" />
+            <!-- Slider -->
+            <input
+              class="popup"
+              type="range"
+              min="0"
+              max="100"
+              value="90"
+              onchange="volume_change();"
+              id="volume2"
+            />
+          </div>
+        </div>
+        <!-- Mobile controls -->
+        <div class="lg:hidden w-[100%] justify-between flex items-center">
+          <div
+            onclick="playMusic();"
+            class="absolute h-10 w-10 rounded-full text-white bg-black -top-1 left-3 flex items-center justify-center"
+          >
+            Open
+            <i class="fa-solid fa-up"></i>
+          </div>
+          <div class="flex">
+            <div class="mr-5">
+              <img
+                src="images/Rectangle 15.png"
+                alt=""
+                id="track_img2"
+                class="h-[50px] rounded-xl w-[50px]"
+              />
+            </div>
+
+            <div class="flex flex-col">
+              <h1 class="text-white text-md font-semibold" id="title2">
+                Seasons In
+              </h1>
+              <p class="text-gray-300 font-bold text-xs" id="artist3">James</p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center space-x-3 -mt-5">
+            <div
+              class="flex bg-[#FACD66] focus: border border-gray-600 rounded-full h-8 w-8 items-center justify-center"
+            >
+              <img src="images/Vector (8).png" alt="" onclick="justplay();" />
+            </div>
+            <div>
+              <img src="images/next.png" alt="" onclick="next_song();" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Main content -->
+      <!-- cover container -->
+      <div class="container" id="container">
+        <div
+          class="flex flex-col lg:flex-row space-x-0 lg:space-x-32 w-full items-center justify-between"
+        >
+          <div
+            class="flex bg-[#609EAF] w-[90%] lg:w-[45vw] min-h-[50vh] ml-0containe lg:ml-4 relative rounded-3xl mt-16 overflow-hidden flex-shrink-0 pb-0"
+          >
+            <div class="flex flex-col space-y-20 lg:space-y-5 p-5 pb-0">
+              <div class="flex flex-col space-y-5 p-5">
+                <h2 class="text-white text-md mb-14 font-semibold">
+                  Curated playlist
+                </h2>
+                <h1 class="text-white text-5xl tracking-wide font-bold">
+                  R&B Hits
+                </h1>
+                <p class="text-white text-sm mb-10">
+                  All mine, Lie again, Petty call me everyday, Out of time, No
+                  love, Bad habit, and so much more
+                </p>
+              </div>
+
+              <div
+                class="flex items-center justify-between lg:justify-between w-[70%] lg:w-[56%] mt-20 lg:mt-auto"
+              >
+                <img
+                  src="/images/Frame 4.png"
+                  alt=""
+                  class="lg:h-auto h-[30px]"
+                />
+
+                <img
+                  src="/images/bluebg-heart.png"
+                  class="lg:h-auto h-[25px]"
+                  alt=""
+                />
+                <span class="text-white text-xl lg:text-md whitespace-nowrap"
+                  >33k Likes</span
+                >
+              </div>
+            </div>
+
+            <img
+              src="/images/bluebackground.svg"
+              class="absolute right-0 top-0 bottom-0 h-full"
+              alt=""
+            />
+            <img
+              src="/images/Pexels Photo by Eric Esma.png"
+              class="z-[2] h-100% object-cover hidden lg:block"
+              alt=""
+            />
+          </div>
+          <!-- Right side with Charts section -->
+
+          <div class="overflow-x-hidden w-full flex flex-col">
+            <h1 class="text-2xl text-white items-start mt-24">Top Charts</h1>
+            <div
+              class="flex flex-row lg:flex-col w-full lg:w-[30vw] items-start space-y-0 space-x-5 lg:space-x-0 lg:space-y-3 mt-4 overflow-x-scroll"
+            >
+              <!-- Play list 1 -->
+              <div
+                class="flex flex-row lg:flex-row bg-[#111414] min-h-[30vh] lg:min-h-[14vh] lg:items-center justify-between rounded-3xl p-4 w-[80vw] lg:w-[25vw] flex-shrink-0"
+              >
+                <div
+                  class="lg:flex-row flex flex-col space-y-5 lg:space-y-0 lg:space-x-5 items-start flex-shrink-0"
+                >
+                  <img
+                    src="images/Rectangle 17.png"
+                    class="w-[100px] h-[100px] lg:w-auto lg:h-auto"
+                    alt=""
+                  />
+
+                  <div class="flex flex-col items-start space-y-4 lg:space-y-2">
+                    <h1 class="text-xl text-white">Golden age of 80s</h1>
+                    <p class="text-sm text-gray-500">Sean Swadder</p>
+                    <p class="text-sm text-white">2:34:45</p>
+                  </div>
+                </div>
+
+                <div
+                  id="like"
+                  class="flex bg-[#111414] border border-gray-600 rounded-full h-8 w-8 items-center justify-center"
+                  onclick="likeMina();"
+                >
+                  <a id="hearts" onclick="secondPhase();" href="#">
+                    <img src="images/Heart.png" alt="" class="cursor-pointer" />
+                  </a>
+                </div>
+              </div>
+              <!-- Play list 2 -->
+              <div
+                class="flex flex-row lg:flex-row bg-[#111414] min-h-[30vh] lg:min-h-[14vh] lg:items-center justify-between rounded-3xl p-4 w-[80vw] lg:w-[25vw] flex-shrink-0"
+              >
+                <div
+                  class="lg:flex-row flex flex-col space-y-5 lg:space-y-0 lg:space-x-5 items-start flex-shrink-0"
+                >
+                  <img
+                    src="images/Rectangle 17 (1).png"
+                    class="w-[100px] h-[100px] lg:w-auto lg:h-auto"
+                    alt=""
+                  />
+
+                  <div class="flex flex-col items-start space-y-4 lg:space-y-2">
+                    <h1 class="text-xl text-white">Reggae 'n' blues</h1>
+                    <p class="text-sm text-gray-500">DJ YK mule</p>
+                    <p class="text-sm text-white">1:02:42</p>
+                  </div>
+                </div>
+
+                <div
+                  id="like2"
+                  class="flex bg-[#111414] border border-gray-600 rounded-full h-8 w-8 items-center justify-center"
+                  onclick="likeMina2();"
+                >
+                  <a id="hearts2" onclick="secondPhase2();" href="#">
+                    <img src="images/Heart.png" alt="" class="cursor-pointer" />
+                  </a>
+                </div>
+              </div>
+              <!-- Play list 3 -->
+              <div
+                class="flex flex-row lg:flex-row bg-[#111414] min-h-[30vh] lg:min-h-[14vh] lg:items-center justify-between rounded-3xl p-4 w-[80vw] lg:w-[25vw] flex-shrink-0"
+                onclick="charts();"
+              >
+                <div
+                  class="lg:flex-row flex flex-col space-y-5 lg:space-y-0 lg:space-x-5 items-start flex-shrink-0"
+                >
+                  <img
+                    src="images/Rectangle 17 (2).png"
+                    class="w-[100px] h-[100px] lg:w-auto lg:h-auto"
+                    alt=""
+                  />
+
+                  <div class="flex flex-col items-start space-y-4 lg:space-y-2">
+                    <h1 class="text-xl text-white">Tomorrow's tunes</h1>
+                    <p class="text-sm text-gray-500">Obi Datti</p>
+                    <p class="text-sm text-white">2:01:25</p>
+                  </div>
+                </div>
+
+                <div
+                  id="like3"
+                  class="flex bg-[#111414] border border-gray-600 rounded-full h-8 w-8 items-center justify-center"
+                  onclick="likeMina3();"
+                >
+                  <a id="hearts3" onclick="secondPhase3();" href="#">
+                    <img src="images/Heart.png" alt="" class="cursor-pointer" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slider content -->
+        <div class="mt-16 ml-7">
+          <h1 class="lg:text-4xl text-2xl text-white">New Releases.</h1>
+          <!-- Overflow hidden div -->
+          <div class="overflow-x-scroll px-0 lg:px-6">
+            <!-- Inner div -->
+            <div
+              class="flex overflow-x-scroll w-[100%] pt-5 space-x-10 shrink-0"
+            >
+              <div class="flex flex-col text-[#ffffff80] shrink-0">
+                <img src="images/Rectangle 14.png" alt="" />
+                <h3 class="text-xl">Life in a bubble</h3>
+                <p class="text-md">The van</p>
+              </div>
+              <div class="flex flex-col text-[#ffffff80] shrink-0">
+                <img src="images/Rectangle 14(1)png.png" alt="" />
+                <h3 class="text-xl">Mountain</h3>
+                <p class="text-md">Krisx</p>
+              </div>
+              <div class="flex flex-col text-[#ffffff80] shrink-0">
+                <img src="images/Rectangle 141.png" alt="" />
+                <h3 class="text-xl">Limits</h3>
+                <p class="text-md">John Dillion</p>
+              </div>
+              <div class="flex flex-col text-[#ffffff80] shrink-0">
+                <img src="images/rectangle144f.png" class="h-[155px]" alt="" />
+                <h3 class="text-xl">Everything's black</h3>
+                <p class="text-md">Ameed</p>
+              </div>
+              <div class="flex flex-col text-[#ffffff80] shrink-0">
+                <img src="images/Rectangle 144.png" alt="" />
+                <h3 class="text-xl">Cancelled</h3>
+                <p class="text-md">Enimen</p>
+              </div>
+              <div class="flex flex-col text-[#ffffff80] shrink-0">
+                <img src="images/Rectangle 145.png" alt="" />
+                <h3 class="text-xl">Nomad</h3>
+                <p class="text-md">Makrol eli</p>
+              </div>
+              <div class="flex flex-col text-[#ffffff80] shrink-0">
+                <img
+                  src="images/Rectangle 1447.png"
+                  class="rounded-2xl"
+                  alt=""
+                />
+                <h3 class="text-xl">Blind</h3>
+                <p class="text-md">Wiz zee</p>
+              </div>
+            </div>
+          </div>
+          <h1 class="lg:text-4xl text-2xl text-white mt-16">
+            Popular in your area
+          </h1>
+          <!-- Overflow hidden div -->
+          <div class="overflow-x-scroll px-0 lg:px-6">
+            <!-- Inner div -->
+            <div class="flex overflow-x-auto w-[100%] pt-5 space-x-10 shrink-0">
+              <div class="flex flex-col text-[#ffffff80] shrink-0">
+                <img src="images/Rectangle 14.png" alt="" />
+                <h3 class="text-xl">Life in a bubble</h3>
+                <p class="text-md">The van</p>
+              </div>
+              <div class="flex flex-col text-[#ffffff80] shrink-0">
+                <img src="images/Rectangle 14(1)png.png" alt="" />
+                <h3 class="text-xl">Mountain</h3>
+                <p class="text-md">Krisx</p>
+              </div>
+              <div class="flex flex-col text-[#ffffff80] shrink-0">
+                <img src="images/Rectangle 141.png" alt="" />
+                <h3 class="text-xl">Limits</h3>
+                <p class="text-md">John Dillion</p>
+              </div>
+              <div class="flex flex-col text-[#ffffff80] shrink-0">
+                <img src="images/rectangle144f.png" class="h-[155px]" alt="" />
+                <h3 class="text-xl">Everything's black</h3>
+                <p class="text-md">Ameed</p>
+              </div>
+              <div class="flex flex-col text-[#ffffff80] shrink-0">
+                <img src="images/Rectangle 144.png" alt="" />
+                <h3 class="text-xl">Cancelled</h3>
+                <p class="text-md">Enimen</p>
+              </div>
+              <div class="flex flex-col text-[#ffffff80] shrink-0">
+                <img src="images/Rectangle 145.png" alt="" />
+                <h3 class="text-xl">Nomad</h3>
+                <p class="text-md">Makrol eli</p>
+              </div>
+              <div class="flex flex-col text-[#ffffff80] shrink-0">
+                <img
+                  src="images/Rectangle 1447.png"
+                  class="rounded-2xl"
+                  alt=""
+                />
+                <h3 class="text-xl">Blind</h3>
+                <p class="text-md">Wiz zee</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Pop up music player -->
+      <section class="music_container fixed bg-opacity-0" id="player">
+        <div
+          class="Popup relative h-[80%] w-[70%] flex items-center flex-col lg:flex-row justify-center rounded-2xl"
+        >
+          <div
+            id="playerclose"
+            onclick="closePlayer();"
+            class="close_btn absolute top-[10px] left-[10px] w-[30px] h-[30px] rounded-full flex items-center justify-center text-white cursor-pointer bg-black z-50"
+          >
+            <button class="cursor-pointer" onclick="closePlayer();">
+              <i class="fa-solid fa-xmark" onclick="closePlayer();"></i>
+            </button>
+          </div>
+          <div
+            class="flex items-center justify-center py-[22px] px-[36px] text-white rounded-[5px] bg-gray-900 bg-opacity-50 md:hidden absolute top-[10px] right-[10px] w-[30px] h-[20px]"
+          >
+            <p id="present2">1</p>
+            <p>/</p>
+            <p id="total2">14</p>
+          </div>
+          <!-- Left part -->
+
+          <div class="left">
+            <!-- Song image -->
+            <img src="" alt="" id="track_image" />
+            <div class="volume">
+              <p id="volume_show">90</p>
+              <button id="volume_icon" onclick="mute_sound();">
+                <i class="fa-solid fa-volume-high"></i>
+              </button>
+
+              <input
+                class="popup z-50"
+                type="range"
+                min="0"
+                max="100"
+                value="90"
+                onchange="volume_change();"
+                id="volume"
+              />
+            </div>
+          </div>
+
+          <!-- Right part  -->
+          <div class="right">
+            <div class="show_song_no hidden md:block">
+              <p id="present">1</p>
+              <p>/</p>
+              <p id="total">14</p>
+            </div>
+
+            <!-- Song title -->
+            <div class="flex flex-col">
+              <p id="title" class="whitespace-nowrap">title.mp3</p>
+              <p id="artist" class="whitespace-nowrap">Artist name</p>
+            </div>
+
+            <!-- Middle part -->
+
+            <div class="middle">
+              <button onclick="previous_song();" id="pre">
+                <i class="fa-solid fa-backward-step"></i>
+              </button>
+              <button onclick="justplay();" id="play">
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <button onclick="next_song();" id="next">
+                <i class="fa-solid fa-forward-step"></i>
+              </button>
+            </div>
+
+            <!-- Song duration part -->
+            <div class="duration">
+              <input
+                class="popup"
+                type="range"
+                name=""
+                min="0"
+                max="100"
+                value="0"
+                id="duration_slider"
+                onchange="change_duration();"
+              />
+              <button id="auto" onclick="autoplay_switch();">
+                Auto Next <i class="fa-solid fa-circle-notch"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Collections -->
+      <section
+        id="collections"
+        class="w-full lg:h-auto h-[120vh] hidden mt-20 px-5 lg:px-1"
+      >
+        <!-- Button div -->
+        <div>
+          <a
+            href="#"
+            class="p-2 px-4 rounded-full bg-[#facd66] text-[#1D2123] mr-5"
+          >
+            My Collection
+          </a>
+          <a
+            href="#"
+            class="p-2 px-6 rounded-full bg-transparent border border-[#ffffff80] text-[#ffffff80]"
+            >Likes</a
+          >
+        </div>
+        <!-- Animation in collections section -->
+        <div
+          class="mt-10 flex lg:pl-1 lg:flex-row flex-col space-x-0 space-y-5 lg:space-y-0 items-center flex-shrink-0 lg:space-x-12 lg:px-1 mx-auto"
+          --
+        >
+          <!-- First -->
+          <div
+            class="animate flying-man w-full lg:w-[213px] lg:h-[234px] rounded-3xl relative overflow-hidden group"
+          >
+            <img
+              src="/images/Rectangle 26.png"
+              class="w-full lg:w-[213px] lg:h-[234px] group-hover:scale-125 duration-700"
+              alt=""
+            />
+            <div
+              class="absolute bottom-0 right-0 left-5 h-[40%] group-hover:bottom-10 duration-700 flex items-center space-x-12 min-w-full"
+            >
+              <div>
+                <h1 class="text-3xl font-light text-white">Limits</h1>
+                <p class="text-white text-xs mt-3 font-extralight">
+                  John watts
+                </p>
+                <p
+                  class="text-white text-xs font-extralight hidden group-hover:block duration-700 mt-2"
+                >
+                  2.3m likes
+                </p>
+              </div>
+              <div
+                class="cursor-pointer bg-[#FACD66] h-10 w-10 hidden relative rounded-full group-hover:flex items-center justify-center duration-800"
+              >
+                <img src="/images/play.png" class="h-5 w-5" alt="" />
+              </div>
+            </div>
+          </div>
+          <!-- Second -->
+          <div
+            class="animate flying-man w-full lg:w-[213px] lg:h-[234px] rounded-3xl relative overflow-hidden group"
+          >
+            <img
+              src="/images/Rectangle 26.1.png"
+              class="w-full lg:w-[213px] lg:h-[234px] group-hover:scale-125 duration-700"
+              alt=""
+            />
+            <div
+              class="absolute bottom-0 right-0 left-5 h-[40%] group-hover:bottom-10 duration-700 flex items-center space-x-12 min-w-full"
+            >
+              <div>
+                <h1 class="text-3xl font-light text-white">Limits</h1>
+                <p class="text-white text-xs mt-3 font-extralight">
+                  John watts
+                </p>
+                <p
+                  class="text-white text-xs font-extralight hidden group-hover:block duration-700 mt-2"
+                >
+                  2.3m likes
+                </p>
+              </div>
+              <div
+                class="cursor-pointer bg-[#FACD66] h-10 w-10 hidden relative rounded-full group-hover:flex items-center justify-center duration-800"
+              >
+                <img src="/images/play.png" class="h-5 w-5" alt="" />
+              </div>
+            </div>
+          </div>
+          <!-- Third -->
+          <div
+            class="animate flying-man w-full lg:w-[213px] lg:h-[234px] rounded-3xl relative overflow-hidden group"
+          >
+            <img
+              src="/images/Rectangle 26.2.png"
+              class="w-full lg:w-[213px] lg:h-[234px] group-hover:scale-125 duration-700"
+              alt=""
+            />
+            <div
+              class="absolute bottom-0 right-0 left-5 h-[40%] group-hover:bottom-10 duration-700 flex items-center space-x-12 min-w-full"
+            >
+              <div>
+                <h1 class="text-3xl font-light text-white">Limits</h1>
+                <p class="text-white text-xs mt-3 font-extralight">
+                  John watts
+                </p>
+                <p
+                  class="text-white text-xs font-extralight hidden group-hover:block duration-700 mt-2"
+                >
+                  2.3m likes
+                </p>
+              </div>
+              <div
+                class="cursor-pointer bg-[#FACD66] h-10 w-10 hidden relative rounded-full group-hover:flex items-center justify-center duration-800"
+              >
+                <img src="/images/play.png" class="h-5 w-5" alt="" />
+              </div>
+            </div>
+          </div>
+          <!-- Fourth -->
+          <div
+            class="animate flying-man w-full lg:w-[213px] lg:h-[234px] rounded-3xl relative overflow-hidden group"
+          >
+            <img
+              src="/images/Rectangle 26.3.png"
+              class="w-full lg:w-[213px] lg:h-[234px] rounded-3xl group-hover:scale-125 duration-700"
+              alt=""
+            />
+            <div
+              class="absolute bottom-0 right-0 left-5 h-[40%] group-hover:bottom-10 duration-700 flex items-center space-x-12 min-w-full"
+            >
+              <div>
+                <h1 class="text-3xl font-light text-white">Limits</h1>
+                <p class="text-white text-xs mt-3 font-extralight">
+                  John watts
+                </p>
+                <p
+                  class="text-white text-xs font-extralight hidden group-hover:block duration-700 mt-2"
+                >
+                  2.3m likes
+                </p>
+              </div>
+              <div
+                class="cursor-pointer bg-[#FACD66] h-10 w-10 hidden relative rounded-full group-hover:flex items-center justify-center duration-800"
+              >
+                <img src="/images/play.png" class="h-5 w-5" alt="" />
+              </div>
+            </div>
+          </div>
+          <!-- Fifth -->
+          <div
+            class="animate flying-man w-full lg:w-[213px] lg:h-[234px] rounded-3xl relative overflow-hidden group"
+          >
+            <img
+              src="/images/rect26.png"
+              class="w-full lg:w-[213px] lg:h-[234px] group-hover:scale-125 duration-700 opacity-40"
+              alt=""
+            />
+            <div
+              class="absolute bottom-0 right-0 left-5 h-[40%] group-hover:bottom-10 duration-700 flex items-center space-x-12 min-w-full"
+            >
+              <div>
+                <h1 class="text-3xl font-light text-white">Limits</h1>
+                <p class="text-white text-xs mt-3 font-extralight">
+                  John watts
+                </p>
+                <p
+                  class="text-white text-xs font-extralight hidden group-hover:block duration-700 mt-2"
+                >
+                  2.3m likes
+                </p>
+              </div>
+              <div
+                class="cursor-pointer bg-[#FACD66] h-10 w-10 hidden relative rounded-full group-hover:flex items-center justify-center duration-800"
+              >
+                <img src="/images/play.png" class="h-5 w-5" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Charts section -->
+      <div id="chart" class="hidden mt-20 min-w-full h-screen relative">
+        <div
+          class="flex lg:flex-row flex-col space-x-0 lg:space-x-10 items-center"
+        >
+          <div class="lg:w-[400px]">
+            <img
+              src="images/rect26.png"
+              class="rounded-3xl lg:w-[400px]"
+              id="widthimg"
+              alt=""
+            />
+          </div>
+
+          <!-- Right side -->
+          <div class="lg:w-[500px] flex flex-col" id="collection-width mt-6">
+            <h1 class="text-[#A4C7C6] text-2xl lg:text-5xl font-bold">
+              Tomorrow's Tunes
+            </h1>
+            <p class="text-[#EFEEE0] mt-7">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+              aliquam, purus sit amet luctus venenatis
+            </p>
+            <p class="text-[#EFEEE0] mt-6">64 songs ~ 16 hrs+</p>
+            <!-- Div with buttons -->
+            <div class="flex mt-7 space-x-3 lg:space-x-5 items-center">
+              <div
+                onclick="playAll();"
+                class="bg-[#33373b5e] py-2 px-5 lg:px-4 rounded-full flex items-center justify-between space-x-3 cursor-pointer"
+              >
+                <img src="images/Playbtn.png" alt="" />
+                <p class="text-[#EFEEE0] whitespace-nowrap">Play all</p>
+              </div>
+              <div
+                class="bg-[#33373b5e] py-2 px-5 lg:px-4 rounded-full flex items-center justify-between space-x-3 cursor-pointer"
+              >
+                <img src="images/music-square-add.png" alt="" />
+                <p class="text-[#EFEEE0] whitespace-nowrap">
+                  Add to collection
+                </p>
+              </div>
+              <div
+                class="bg-[#33373b5e] flex items-center justify-center rounded-full h-10 w-10 lg:w-10 cursor-pointer flex-shrink-0"
+              >
+                <img src="/images/redheart.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Actual songs -->
+        <div class="flex flex-col space-y-9 lg:space-y-4 mt-12">
+          <!-- Item 1 -->
+          <div
+            class="bg-[#33373b5e] min-w-full rounded-2xl pr-5 lg:px-1 pl-5 py-2 flex items-center justify-between"
+          >
+            <div
+              class="flex w-[15%] lg:w-[5%] space-x-5 items-center justify-between"
+            >
+              <img
+                src="images/small-song1.png"
+                class="h-full flex-shrink-0 lg:h-auto"
+                alt=""
+              />
+              <img
+                src="images/Heartsmall.png"
+                alt=""
+                class="cursor-pointer hidden lg:block"
+              />
+            </div>
+            <div
+              class="flex lg:flex-row flex-col w-[60%] justify-between text-[#EFEEE0] whitespace-nowrap"
+            >
+              <div class="w-40"><p>Let me love you - Krisx</p></div>
+              <div class="w-10"><p>Single</p></div>
+              <div class="w-10 hidden lg:block"><p>4:17</p></div>
+            </div>
+            <div
+              class="w-[10%] space-y-2 lg:space-y-0 lg:w-[5%] flex flex-col lg:block"
+            >
+              <img src="images/more-vertical.png" alt="" />
+              <p class="lg:hidden block text-white">4:17</p>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div
+            class="bg-[#33373b5e] min-w-full rounded-2xl pr-5 lg:px-1 pl-5 py-2 flex items-center justify-between"
+          >
+            <div
+              class="flex w-[15%] lg:w-[5%] space-x-5 items-center justify-between"
+            >
+              <img
+                src="images/smallsong2.png"
+                class="h-full flex-shrink-0 lg:h-auto"
+                alt=""
+              />
+              <img
+                src="images/Heartsmall.png"
+                alt=""
+                class="cursor-pointer hidden lg:block"
+              />
+            </div>
+            <div
+              class="flex lg:flex-row flex-col w-[60%] justify-between text-[#EFEEE0] whitespace-nowrap"
+            >
+              <div class="w-40 cursor-pointer" onclick="playMusic();">
+                <p>Wetin man go do - Burna Boy</p>
+              </div>
+              <div class="w-10"><p>Single</p></div>
+              <div class="w-10 hidden lg:block"><p>2:30</p></div>
+            </div>
+            <div
+              class="w-[10%] space-y-2 lg:space-y-0 lg:w-[5%] flex flex-col lg:block"
+            >
+              <img src="images/more-vertical.png" alt="" />
+              <p class="lg:hidden block text-white">2:30</p>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div
+            class="bg-[#33373b5e] min-w-full rounded-2xl pr-5 lg:px-1 pl-5 py-2 flex items-center justify-between"
+          >
+            <div
+              class="flex w-[15%] lg:w-[5%] space-x-5 items-center justify-between"
+            >
+              <img
+                src="images/smallsong3.png"
+                class="h-full flex-shrink-0 lg:h-auto"
+                alt=""
+              />
+              <img
+                src="images/Heartsmall.png"
+                alt=""
+                class="cursor-pointer hidden lg:block"
+              />
+            </div>
+            <div
+              class="flex lg:flex-row flex-col w-[60%] justify-between text-[#EFEEE0] whitespace-nowrap"
+            >
+              <div class="w-40"><p>Stand strong - Davido</p></div>
+              <div class="w-10"><p>Single</p></div>
+              <div class="w-10 hidden lg:block"><p>2:02</p></div>
+            </div>
+            <div
+              class="w-[10%] space-y-2 lg:space-y-0 lg:w-[5%] flex flex-col lg:block"
+            >
+              <img src="images/more-vertical.png" alt="" />
+              <p class="lg:hidden block text-white">2:02</p>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div
+            class="bg-[#33373b5e] min-w-full rounded-2xl pr-5 lg:px-1 pl-5 py-2 flex items-center justify-between"
+          >
+            <div
+              class="flex w-[15%] lg:w-[5%] space-x-5 items-center justify-between"
+            >
+              <img
+                src="images/smallsong4.png"
+                class="h-full flex-shrink-0 lg:h-auto"
+                alt=""
+              />
+              <img
+                src="images/Heartsmall.png"
+                alt=""
+                class="cursor-pointer hidden lg:block"
+              />
+            </div>
+            <div
+              class="flex lg:flex-row flex-col w-[60%] justify-between text-[#EFEEE0] whitespace-nowrap"
+            >
+              <div class="w-40"><p>Closa - Ycee</p></div>
+              <div class="w-10"><p>Obi datti</p></div>
+              <div class="w-10 hidden lg:block"><p>3:23</p></div>
+            </div>
+            <div
+              class="w-[10%] space-y-2 lg:space-y-0 lg:w-[5%] flex flex-col lg:block"
+            >
+              <img src="images/more-vertical.png" alt="" />
+              <p class="lg:hidden block text-white">3:23</p>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div
+            class="bg-[#33373b5e] min-w-full rounded-2xl pr-5 lg:px-1 pl-5 py-2 flex items-center justify-between"
+          >
+            <div
+              class="flex w-[15%] lg:w-[5%] space-x-5 items-center justify-between"
+            >
+              <img
+                src="images/smallsong5.png"
+                class="h-full flex-shrink-0 lg:h-auto"
+                alt=""
+              />
+              <img
+                src="images/Heartsmall.png"
+                alt=""
+                class="cursor-pointer hidden lg:block"
+              />
+            </div>
+            <div
+              class="flex lg:flex-row flex-col w-[60%] justify-between text-[#EFEEE0] whitespace-nowrap"
+            >
+              <div class="w-40"><p>Rich Flex - Drake x 21 Savage</p></div>
+              <div class="w-10"><p>Her loss</p></div>
+              <div class="w-10 hidden lg:block"><p>3:00</p></div>
+            </div>
+            <div
+              class="w-[10%] space-y-2 lg:space-y-0 lg:w-[5%] flex flex-col lg:block"
+            >
+              <img src="images/more-vertical.png" alt="" />
+              <p class="lg:hidden block text-white">3:00</p>
+            </div>
+          </div>
+          <!-- Item 6 -->
+          <div
+            class="bg-[#33373b5e] min-w-full rounded-2xl pr-5 lg:px-1 pl-5 py-2 flex items-center justify-between"
+          >
+            <div
+              class="flex w-[15%] lg:w-[5%] space-x-5 items-center justify-between"
+            >
+              <img
+                src="images/small-song1.png"
+                class="h-full flex-shrink-0 lg:h-auto"
+                alt=""
+              />
+              <img
+                src="images/Heartsmall.png"
+                alt=""
+                class="cursor-pointer hidden lg:block"
+              />
+            </div>
+            <div
+              class="flex lg:flex-row flex-col w-[60%] justify-between text-[#EFEEE0] whitespace-nowrap"
+            >
+              <div class="w-40"><p>Middle child - Jcole</p></div>
+              <div class="w-10"><p>Single</p></div>
+              <div class="w-10 hidden lg:block"><p>3:08</p></div>
+            </div>
+            <div
+              class="w-[10%] space-y-2 lg:space-y-0 lg:w-[5%] flex flex-col lg:block"
+            >
+              <img src="images/more-vertical.png" alt="" />
+              <p class="lg:hidden block text-white">3:08</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="JS/script.js" defer></script>
+  </body>
+</html>
