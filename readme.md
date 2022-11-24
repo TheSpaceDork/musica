@@ -1,6 +1,7 @@
-# Simple Tailwind CSS Starter
+# Musica
+This is a music player website that features dashboard functionality and music that actually plays with implemented control buttons for next, previous, pause and play 
+also volume and seek range sliders
 
-This is an extremley simple setup to develop Tailwind projects. This will be used in my Tailwind From Scratch course.
 
 ## Usage
 
