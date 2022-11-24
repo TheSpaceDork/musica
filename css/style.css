@@ -542,6 +542,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 0px;
 }
 
+.-top-1 {
+  top: -0.25rem;
+}
+
+.left-3 {
+  left: 0.75rem;
+}
+
 .top-\[10px\] {
   top: 10px;
 }
@@ -556,26 +564,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .left-5 {
   left: 1.25rem;
-}
-
-.top-2 {
-  top: 0.5rem;
-}
-
-.left-7 {
-  left: 1.75rem;
-}
-
-.top-1 {
-  top: 0.25rem;
-}
-
-.-top-1 {
-  top: -0.25rem;
-}
-
-.left-3 {
-  left: 0.75rem;
 }
 
 .z-50 {
@@ -631,6 +619,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1rem;
 }
 
+.mr-5 {
+  margin-right: 1.25rem;
+}
+
 .-mt-5 {
   margin-top: -1.25rem;
 }
@@ -653,10 +645,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .ml-7 {
   margin-left: 1.75rem;
-}
-
-.mr-5 {
-  margin-right: 1.25rem;
 }
 
 .mt-10 {
@@ -731,8 +719,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 15vh;
 }
 
-.h-\[50vh\] {
-  height: 50vh;
+.h-\[60px\] {
+  height: 60px;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.h-\[50px\] {
+  height: 50px;
 }
 
 .h-\[25px\] {
@@ -741,10 +737,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-full {
   height: 100%;
-}
-
-.h-\[30vh\] {
-  height: 30vh;
 }
 
 .h-\[100px\] {
@@ -771,36 +763,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 40%;
 }
 
-.h-10 {
-  height: 2.5rem;
-}
-
 .h-5 {
   height: 1.25rem;
 }
 
-.h-\[10px\] {
-  height: 10px;
-}
-
-.h-\[50px\] {
-  height: 50px;
-}
-
-.h-\[55px\] {
-  height: 55px;
-}
-
-.h-\[60px\] {
-  height: 60px;
+.min-h-\[50vh\] {
+  min-height: 50vh;
 }
 
 .min-h-\[30vh\] {
   min-height: 30vh;
-}
-
-.min-h-\[50vh\] {
-  min-height: 50vh;
 }
 
 .w-\[80vw\] {
@@ -839,6 +811,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 40px;
 }
 
+.w-\[30\%\] {
+  width: 30%;
+}
+
+.w-\[60px\] {
+  width: 60px;
+}
+
 .w-\[40vh\] {
   width: 40vh;
 }
@@ -847,12 +827,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 30vw;
 }
 
-.w-\[7vw\] {
-  width: 7vw;
+.w-\[10\%\] {
+  width: 10%;
 }
 
 .w-\[100\%\] {
   width: 100%;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-\[50px\] {
+  width: 50px;
 }
 
 .w-\[90\%\] {
@@ -865,10 +853,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[100px\] {
   width: 100px;
-}
-
-.w-10 {
-  width: 2.5rem;
 }
 
 .w-5 {
@@ -887,40 +871,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 10rem;
 }
 
-.w-\[10\%\] {
-  width: 10%;
-}
-
-.w-\[10px\] {
-  width: 10px;
-}
-
-.w-\[50px\] {
-  width: 50px;
-}
-
-.w-\[55px\] {
-  width: 55px;
-}
-
-.w-\[30\%\] {
-  width: 30%;
-}
-
-.w-\[60px\] {
-  width: 60px;
-}
-
-.min-w-\[70vw\] {
-  min-width: 70vw;
+.min-w-\[60\%\] {
+  min-width: 60%;
 }
 
 .min-w-full {
   min-width: 100%;
-}
-
-.min-w-\[60\%\] {
-  min-width: 60%;
 }
 
 .flex-shrink-0 {
@@ -1065,6 +1021,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 9999px;
 }
 
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
 .rounded-3xl {
   border-radius: 1.5rem;
 }
@@ -1075,10 +1035,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .rounded-\[5px\] {
   border-radius: 5px;
-}
-
-.rounded-xl {
-  border-radius: 0.75rem;
 }
 
 .border {
@@ -1118,14 +1074,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: inherit;
 }
 
-.bg-\[\#609EAF\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(96 158 175 / var(--tw-bg-opacity));
-}
-
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#609EAF\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(96 158 175 / var(--tw-bg-opacity));
 }
 
 .bg-gray-900 {
@@ -1144,11 +1100,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-\[\#33373b5e\] {
   background-color: #33373b5e;
-}
-
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-10 {
@@ -2141,18 +2092,6 @@ div::-webkit-scrollbar {
 
   .lg\:h-\[234px\] {
     height: 234px;
-  }
-
-  .lg\:min-h-\[20vh\] {
-    min-height: 20vh;
-  }
-
-  .lg\:min-h-\[18vh\] {
-    min-height: 18vh;
-  }
-
-  .lg\:min-h-\[16vh\] {
-    min-height: 16vh;
   }
 
   .lg\:min-h-\[14vh\] {

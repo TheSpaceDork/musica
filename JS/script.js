@@ -71,7 +71,7 @@ function closeMenu() {
 function playMusic() {
     let player = document.getElementById('player');
     player.classList.toggle('music_player');
-    // playsong();
+     playsong();
 }
 function playAll() {
     let player = document.getElementById('player');
